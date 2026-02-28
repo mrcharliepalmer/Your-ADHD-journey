@@ -630,7 +630,7 @@
       max-width: var(--showcase-width);
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto 1fr;
+      grid-template-rows: auto auto 1fr;
       gap: 0 3rem;
       align-items: start;
     }
@@ -640,9 +640,14 @@
       grid-row: 1;
     }
 
-    .journey-section--illustrated .journey-body {
+    .journey-section--illustrated .journey-body-before {
       grid-column: 1;
       grid-row: 2;
+    }
+
+    .journey-section--illustrated .journey-body-after {
+      grid-column: 1;
+      grid-row: 3;
     }
 
     .journey-section--illustrated .journey-illustration {
@@ -652,7 +657,8 @@
     }
 
     .journey-section--illustrated .journey-header,
-    .journey-section--illustrated .journey-body {
+    .journey-section--illustrated .journey-body-before,
+    .journey-section--illustrated .journey-body-after {
       max-width: var(--content-width);
     }
 
@@ -674,7 +680,7 @@
       max-width: var(--showcase-width);
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto 1fr;
+      grid-template-rows: auto auto 1fr;
       gap: 0 3rem;
       align-items: start;
     }
@@ -684,9 +690,14 @@
       grid-row: 1;
     }
 
-    .journey-section--illustrated-left .journey-body {
+    .journey-section--illustrated-left .journey-body-before {
       grid-column: 2;
       grid-row: 2;
+    }
+
+    .journey-section--illustrated-left .journey-body-after {
+      grid-column: 2;
+      grid-row: 3;
     }
 
     .journey-section--illustrated-left .journey-illustration {
@@ -696,7 +707,8 @@
     }
 
     .journey-section--illustrated-left .journey-header,
-    .journey-section--illustrated-left .journey-body {
+    .journey-section--illustrated-left .journey-body-before,
+    .journey-section--illustrated-left .journey-body-after {
       max-width: var(--content-width);
     }
 
@@ -1059,7 +1071,7 @@
       .journey-section--illustrated .journey-inner,
       .journey-section--illustrated-left .journey-inner {
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
+        grid-template-rows: auto auto auto auto;
         gap: 1.5rem;
       }
 
@@ -1069,16 +1081,22 @@
         grid-row: 1;
       }
 
-      .journey-section--illustrated .journey-illustration,
-      .journey-section--illustrated-left .journey-illustration {
+      .journey-section--illustrated .journey-body-before,
+      .journey-section--illustrated-left .journey-body-before {
         grid-column: 1;
         grid-row: 2;
       }
 
-      .journey-section--illustrated .journey-body,
-      .journey-section--illustrated-left .journey-body {
+      .journey-section--illustrated .journey-illustration,
+      .journey-section--illustrated-left .journey-illustration {
         grid-column: 1;
         grid-row: 3;
+      }
+
+      .journey-section--illustrated .journey-body-after,
+      .journey-section--illustrated-left .journey-body-after {
+        grid-column: 1;
+        grid-row: 4;
       }
 
       .journey-illustration img {
@@ -1217,12 +1235,14 @@
         <span class="step-num">01</span>
         <h2>You've taken the first step</h2>
       </div>
-      <div class="journey-body">
+      <div class="journey-body-before">
         <p>You've decided to find out more. That might mean you've come directly to us, or your GP has referred you. Either way, you're in the right place.</p>
-        <p>Once you sign up, we'll be in touch within 24 hours — usually sooner. From there, we'll guide you through everything. You won't be left wondering what happens next.</p>
       </div>
       <div class="journey-illustration">
         <img src="Illustrations/Door-ajar-illustration.png" alt="A hand-drawn illustration of a door slightly ajar, with warm light spilling through" loading="lazy">
+      </div>
+      <div class="journey-body-after">
+        <p>Once you sign up, we'll be in touch within 24 hours — usually sooner. From there, we'll guide you through everything. You won't be left wondering what happens next.</p>
       </div>
     </div>
   </section>
@@ -1265,13 +1285,15 @@
         <span class="step-num">03</span>
         <h2>While you wait — support from day one</h2>
       </div>
-      <div class="journey-body">
+      <div class="journey-body-before">
         <p>You don't have to wait until your assessment to start feeling supported. As soon as you sign up, you'll have access to the CARE ADHD app — our digital support programme designed specifically for people with ADHD, by a team of ADHD specialists.</p>
-        <p>The app includes CBT tools, daily exercises, and workbook activities built around the specific challenges ADHD creates — with focus, organisation, stress, and relationships. Think of it as a way of beginning to understand yourself better while you work through the assessment process.</p>
-        <p class="step2-closing">This is what we call our 'waiting well' service. Because the weeks before a diagnosis shouldn't feel like dead time.</p>
       </div>
       <div class="journey-illustration">
         <img src="Illustrations/phone-illustration.png" alt="A hand-drawn illustration of a hand holding a smartphone, with warm light glowing from the screen" loading="lazy">
+      </div>
+      <div class="journey-body-after">
+        <p>The app includes CBT tools, daily exercises, and workbook activities built around the specific challenges ADHD creates — with focus, organisation, stress, and relationships. Think of it as a way of beginning to understand yourself better while you work through the assessment process.</p>
+        <p class="step2-closing">This is what we call our 'waiting well' service. Because the weeks before a diagnosis shouldn't feel like dead time.</p>
       </div>
     </div>
   </section>
@@ -1313,13 +1335,15 @@
         <span class="step-num">05</span>
         <h2>Your diagnosis — and what it means</h2>
       </div>
-      <div class="journey-body">
+      <div class="journey-body-before">
         <p>If you receive a diagnosis of ADHD, you'll get a full written report. But more importantly, we'll help you begin to make sense of what it means for you.</p>
-        <p>For many people, a diagnosis brings a complicated mix of feelings. Relief. Grief for time lost. Questions about what comes next. All of that is valid, and none of it needs to be resolved immediately.</p>
-        <p class="step2-closing">What it gives you is a framework — a way of understanding yourself that's more useful than the explanations you might have been working with until now.</p>
       </div>
       <div class="journey-illustration">
         <img src="Illustrations/mirror-illustration.png" alt="A hand-drawn illustration of a mirror, reflecting a clearer sense of self" loading="lazy" style="transform: scaleX(-1);">
+      </div>
+      <div class="journey-body-after">
+        <p>For many people, a diagnosis brings a complicated mix of feelings. Relief. Grief for time lost. Questions about what comes next. All of that is valid, and none of it needs to be resolved immediately.</p>
+        <p class="step2-closing">What it gives you is a framework — a way of understanding yourself that's more useful than the explanations you might have been working with until now.</p>
       </div>
     </div>
   </section>
@@ -1368,13 +1392,15 @@
         <span class="step-num">07</span>
         <h2>What happens after treatment — a sustainable long-term plan</h2>
       </div>
-      <div class="journey-body">
+      <div class="journey-body-before">
         <p>This is something people often wonder about but rarely ask: what happens when my private treatment period ends?</p>
-        <p>The answer is straightforward. Once you're stabilised, we work with your GP to transition your prescribing to them under a shared care arrangement — so your ongoing medication becomes part of your regular NHS care, at NHS cost. CARE ADHD continues to provide your annual review, making sure everything is still working well for you.</p>
-        <p class="step2-closing">Most GPs are happy to enter into shared care arrangements. In the rare cases where a GP won't, we'll continue to prescribe for you directly. Either way, you won't be left without support.</p>
       </div>
       <div class="journey-illustration">
         <img src="Illustrations/window-illustration.png" alt="A hand-drawn illustration of a window looking out onto a calm, open landscape" loading="lazy">
+      </div>
+      <div class="journey-body-after">
+        <p>The answer is straightforward. Once you're stabilised, we work with your GP to transition your prescribing to them under a shared care arrangement — so your ongoing medication becomes part of your regular NHS care, at NHS cost. CARE ADHD continues to provide your annual review, making sure everything is still working well for you.</p>
+        <p class="step2-closing">Most GPs are happy to enter into shared care arrangements. In the rare cases where a GP won't, we'll continue to prescribe for you directly. Either way, you won't be left without support.</p>
       </div>
     </div>
   </section>
