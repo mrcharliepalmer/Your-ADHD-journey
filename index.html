@@ -435,6 +435,13 @@
       margin-bottom: 0;
     }
 
+    /* Restore paragraph spacing inside split body divs —
+       these aren't the last content in the section even if
+       the paragraph is :last-child within its wrapper */
+    .journey-body-before p:last-child {
+      margin-bottom: 1.25rem;
+    }
+
     /* Reveal animation */
     .reveal {
       opacity: 0;
